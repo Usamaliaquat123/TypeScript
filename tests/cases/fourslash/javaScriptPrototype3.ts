@@ -9,12 +9,13 @@
 //// }
 //// myCtor.prototype.foo = function() { return this/**/; };
 //// myCtor.prototype.bar = function() { return '' };
-//// 
+////
 
 goTo.marker();
 edit.insert('.');
 
 // Check members of the function
-verify.completionListContains('foo', undefined, undefined, 'method');
-verify.completionListContains('bar', undefined, undefined, 'method');
-verify.completionListContains('qua', undefined, undefined, 'property');
+verify.completions({
+    marker: "",
+    exact: [{ name: "foo", kind: "method" }, { name: "bar", kind: "method" }, { name: "qua", kind: "property" }],
+});

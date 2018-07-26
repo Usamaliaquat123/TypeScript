@@ -9,4 +9,4 @@
 goTo.marker();
 edit.insert(".");
 verify.not.completionListIsEmpty();
-verify.completionListContains("text");
+verify.completions({ exact: "text" });

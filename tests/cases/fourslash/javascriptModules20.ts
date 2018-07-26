@@ -10,4 +10,4 @@
 //// mod./**/
 
 goTo.marker();
-verify.completionListContains('a');
+verify.completions({ marker: "", exact: "a", isNewIdentifierLocation: true });

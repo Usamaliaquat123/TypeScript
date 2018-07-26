@@ -12,7 +12,7 @@
 ////}
 
 verify.completions(
-    { marker: "1", exact: [] },
+    { marker: "1", exact: undefined },
     // Only keywords should show in completion, no members or types
     { marker: "2", excludes: ["foo", "f", "c", "d", "x", "Object"] },
 );
